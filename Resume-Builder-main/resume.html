@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="logo.png">
+    <title>Resume</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12pt;
+            background: rgb(249, 249, 249);
+            background: radial-gradient(circle, rgba(249, 249, 249, 1) 0%, rgb(161, 127, 240) 49%, rgb(151, 132, 246) 100%);
+            /* background-image: url(./tiles/tile23.jpg); */
+            background-attachment: fixed;
+        }
+        * {
+            margin: 0px;
+        }
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .page {
+            width: 21cm;
+            min-height: 29.7cm;
+            padding: 0.5cm;
+            margin: 0.5cm auto;
+            border: 1px #D3D3D3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        @media print {
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+        * {
+            transition: all .2s;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        .pr {
+            padding-right: 30px;
+        }
+        .pd-table td {
+            padding-right: 10px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+        }
+    </style>
+</body>
+<a href="login.html">Login</a>
+<div class="page">
+    <div class="subpage">
+        <table class="w-100">
+            <tbody>
+                <tr>
+                    <td colspan="2" class="text-center fw-bold fs-4">Resume</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="data:image/png;base64,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" alt="">
+                    </td>
+                    <td class="personal-info zsection">
+                        <a href="profile.html">Profile</a>
+                        <div class="fw-bold name">Divitha</div>
+                        <div>Mobile : <span class="mobile">+91-9100701749</span></div>
+                        <div>Email : <span class="email">divitha439@gmail.com</span></div>
+                        <div>Address : <span class="address">ajantha road,ssundar raj street,piler</span></div>
+                        <hr>
+                    </td>
+                </tr>
+                <tr class="objective-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Objective</td>
+                    <td class="pb-3 objective">
+                        To be a part of an organization where get a chance to use my knowledge
+                        and skills to contribute in the progress of the organizations as well as myself.
+                    </td>
+                </tr>
+                <tr class="experience-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Experience</td>
+                    <td class="pb-3 experiences">
+                        <div class="experience mb-2">
+                            <div class="fw-bold">- <span class="job-role">ladies Representative</span> (<span
+                                    class="duration">1 year</span> )
+                            </div>
+                            <div class="college">mits,madanapalli</div>
+                            <div><span class="working-from">October 2023</span> – <span class="working-to">Currently
+                                    Working</span></div>
+                            <div class="work-description">Handling student problems and their needs</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="education-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Education</td>
+                    <td class="pb-3 educations">
+                        <div class="education mb-2">
+                            <div class="fw-bold">- <span class="course">Completed 12th Class 
+                            </span></div>
+                            <div class="institute">sree chaithanya jr college ,piler</div>
+                            <div class="date">Passed in 2022</div>
+                        </div>
+                        <div class="education mb-2">
+                            <div class="fw-bold">- <span class="course">Btech</span></div>
+                            <div class="institute">madanapalli institute of technology and science</div>
+                            <div class="date">Currently Pursuing</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="skills-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Skills</td>
+                    <td class="pb-3 skills">
+                        <div class="skill">- Basic Knowledge in Computer & Internet</div>
+                        <div class="skill">- MS Office (Word,Excel,Powerpoint)</div>
+                    </td>
+                </tr>
+                <tr class="personal-details-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Personal Details</td>
+                    <td class="pb-3">
+                        <table class="pd-table">
+                            <tr>
+                                <td>Date of Birth</td>
+                                <td>: <span class="date-of-birth">07 july 2004</span></td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>: <span class="gender">Female</span></td>
+                            </tr>
+                            <tr>
+                                <td>Religion</td>
+                                <td>: <span class="religion">Hindhu</span></td>
+                            </tr>
+                            <tr>
+                                <td>Nationality</td>
+                                <td>: <span class="nationality">Indian</span></td>
+                            </tr>
+                            <tr>
+                                <td>Marital Status</td>
+                                <td>: <span class="marital-status">Un-Married</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hobbies</td>
+                                <td>: <span class="hobbies">Listening Music</span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="languages-known-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Languages Known</td>
+                    <td class="pb-3 languages">
+                        English & Hindi
+                    </td>
+                </tr>
+                <tr class="declaration-section zsection">
+                    <td class="fw-bold align-top text-nowrap pr title">Declaration</td>
+                    <td class="pb-5 declaration">
+                        I hereby declare that above information is correct to the best of my
+                        knowledge and can be supported by relevant documents as and when
+                        required.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-3">Date : </td>
+                    <td class="px-3 name text-end">Divitha</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer><a href="template.html">More Templates</a><br>
+        <a href="createresume.html">create your own resume </a><br>
+        <a href="export.html">Export Resume</a>
+    </footer>
+
+</div>
+</html> 
